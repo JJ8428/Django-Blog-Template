@@ -11,7 +11,7 @@ def create_profile(sender, instance, created, **kwargs): # Instance passed in is
 
 @receiver(post_save, sender=User)
 def save_profile(sender, instance, **kwargs): # Instance passed in is the User
-    instace.profile.save()
+    instance.profile.save()
 
 # For me to use these receivers, I need to import them into this app's apps.py
 # receiver decorators are constantly listening for that signal to trigger the function 
